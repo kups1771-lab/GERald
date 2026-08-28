@@ -215,7 +215,6 @@ a {
   height: 1000px;
   object-fit: contain;
   object-position: center bottom;
-  filter: saturate(0.8) contrast(1.08);
 }
 
 .profile-placeholder {
@@ -239,11 +238,10 @@ a {
 .section {
   padding: 110px 0;
   background: var(--white);
-  border-top: 1px solid rgba(112, 225, 208, 0.12);
 }
 
 .section-alt {
-  background: rgba(16, 19, 19, 0.72);
+  background: var(--bg);
 }
 
 .section-heading {
@@ -254,10 +252,6 @@ a {
   font-size: clamp(2rem, 4vw, 3rem);
   letter-spacing: -0.05em;
   line-height: 1.1;
-}
-
-.eyebrow {
-  font-family: "DM Mono", monospace;
 }
 
 .section-heading > p:last-child {
@@ -297,8 +291,7 @@ a {
 .info-card {
   background: var(--bg);
   border: 1px solid var(--line);
-  border-radius: 4px;
-  border-left: 3px solid var(--coral);
+  border-radius: var(--radius);
   padding: 12px 25px;
 }
 
@@ -334,7 +327,7 @@ a {
 .skill-card {
   background: var(--white);
   border: 1px solid var(--line);
-  border-radius: 4px;
+  border-radius: var(--radius);
   padding: 28px;
   transition: 0.25s;
 }
@@ -342,15 +335,13 @@ a {
 .interest-card:hover,
 .skill-card:hover,
 .project-card:hover {
-  transform: translateY(-5px) rotate(-1deg);
+  transform: translateY(-5px);
   box-shadow: var(--shadow);
-  border-color: var(--cyan);
 }
 
 .icon {
   font-size: 2rem;
   margin-bottom: 18px;
-  filter: grayscale(1) sepia(1) saturate(3);
 }
 
 .interest-card h3,
@@ -386,7 +377,7 @@ a {
 
 .progress {
   height: 8px;
-  background: #2b3530;
+  background: #292f3b;
   border-radius: 99px;
   overflow: hidden;
   margin-bottom: 16px;
@@ -394,7 +385,7 @@ a {
 
 .progress div {
   height: 100%;
-  background: linear-gradient(90deg, var(--coral), var(--accent));
+  background: var(--accent);
   border-radius: inherit;
 }
 
@@ -415,8 +406,8 @@ a {
 .tags span,
 .project-tech span {
   display: inline-block;
-  background: rgba(112, 225, 208, 0.1);
-  color: var(--cyan);
+  background: #29264d;
+  color: #b8b3ff;
   border-radius: 99px;
   padding: 6px 12px;
   font-size: 0.78rem;
@@ -432,16 +423,15 @@ a {
 .project-card {
   background: var(--white);
   border: 1px solid var(--line);
-  border-radius: 4px;
+  border-radius: var(--radius);
   overflow: hidden;
   transition: 0.25s;
 }
 
 .project-number {
   padding: 20px 25px;
-  background: var(--coral);
-  color: #17100e;
-  font-family: "DM Mono", monospace;
+  background: var(--dark);
+  color: #fff;
   font-size: 1.7rem;
   font-weight: 800;
 }
@@ -451,7 +441,7 @@ a {
 }
 
 .project-type {
-  color: var(--cyan);
+  color: var(--accent);
   font-size: 0.75rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -494,8 +484,7 @@ a {
 .github-note {
   margin-top: 30px;
   padding: 35px;
-  border-radius: 4px;
-  border: 1px solid var(--cyan);
+  border-radius: var(--radius);
   background: var(--dark);
   color: white;
   text-align: center;
@@ -509,8 +498,8 @@ a {
 
 .contact-section {
   padding: 85px 0;
-  background: var(--coral);
-  color: #17100e;
+  background: var(--accent);
+  color: white;
 }
 
 .contact-content {
@@ -521,7 +510,7 @@ a {
 }
 
 .contact-content .eyebrow {
-  color: #54251d;
+  color: #ddd9ff;
 }
 
 .contact-content h2 {
@@ -533,18 +522,18 @@ a {
 
 .contact-content p:last-child {
   max-width: 650px;
-  color: #54251d;
+  color: #e4e2ff;
 }
 
 .btn.light {
   background: white;
-  color: #54251d;
+  color: var(--accent);
   flex-shrink: 0;
 }
 
 .footer {
   background: var(--dark);
-  color: #88968d;
+  color: #999bab;
   text-align: center;
   padding: 24px;
   font-size: 0.8rem;
